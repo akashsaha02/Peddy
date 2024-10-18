@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peddy</title>
+    <link rel="icon" href="./images/logo.webp" type="image/x-icon">
+
+    <!-- DaisyUI CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.12/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font Awesome Icons -->
+    <script src="https://kit.fontawesome.com/c166f8ccfd.js" crossorigin="anonymous"></script>
+    <!-- Font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <style>
+        .lato-regular {
+            font-family: "Lato", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+
+<body class="lato-regular">
+
+    <!-- Nabvar Start -->
+    <div class="shadow">
+        <div class="navbar max-w-[1920px] px-5 md:px-10 py-2 md:py-5 mx-auto ">
+            <div class="navbar-start">
+                <div class="dropdown">
+                    <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                            stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h8m-8 6h16" />
+                        </svg>
+                    </div>
+                    <ul tabindex="0"
+                        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="#adopt-heading">Shop</a></li>
+                        <li><a href="#footer">Contact</a></li>
+                    </ul>
+                </div>
+                <a href="index.html">
+                    <div class="flex items-center gap-5">
+                        <img src="./images/logo.webp" alt="Peddy Logo" class="w-8">
+                        <p class="text-2xl font-bold">Peddy</p>
+                    </div>
+                </a>
+            </div>
+            <div class="navbar-center hidden lg:flex">
+                <ul class="menu menu-horizontal px-1 text-lg">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="#adopt-heading">Shop</a></li>
+                    <li><a href="#footer">Contact</a></li>
+                </ul>
+            </div>
+            <div class="navbar-end">
+                <i class="p-2 rounded-full border border-black fa-regular fa-user"></i>
+            </div>
+        </div>
+    </div>
+    <!-- Navbar End -->
+    <!-- Banner Section -->
+    <section id="banner"
+        class="bg-banner-image bg-cover text-center flex flex-col justify-center items-center max-w-[1920px] mx-auto px-5 my-6 md:my-16  md:px-10 ">
+        <p class="text-xl font-bold text-gray-500 ">Bringing Families Together🔥</p>
+        <h1 class="text-4xl md:text-6xl font-bold max-w-3xl my-8">Your Path to Adoption Starts Here </h1>
+        <p class="max-w-3xl text-gray-600">Explore a wide range of pets waiting for a loving home and take the first
+            step towards adoption. Together, let's help animals find the care and affection they deserve.</p>
+        <a href="#adopt-heading">
+            <button id="view-more"
+                class="mt-4 bg-[#0E7A81] px-6 py-2 md:mt-8 mb-12 text-lg md:text-xl text-white rounded-xl">View
+                More</button>
+        </a>
+        <img src="./images/pet.webp" alt="">
+    </section>
+    <!-- Banner Section End -->
+
+
+    <section id="adopt-heading" class="max-w-[1920px] px-5 md:px-10 mx-auto my-8 gap-2 md:gap-4 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold max-w-3xl mx-auto my-8">Adopt Your Best Friend</h2>
+        <p class="max-w-3xl mx-auto text-gray-600">Discover your perfect companion from a variety of lovable pets and
+            start your adoption journey today. Bring home a new best friend and make a difference in their life.</p>
+    </section>
+
+
+    <section id="categories"
+        class="grid grid-cols-2 md:grid-cols-4 gap-5 md:gap-8 mt-8 max-w-[1920px] px-5 md:px-10 mx-auto">
+        <!-- Categories will be inserted dynamically here -->
+    </section>
+
+    <section
+        class="max-w-[1920px] px-5 md:px-10 mx-auto my-2 gap-2 md:gap-4 flex my-6 md:my-8 items-center justify-between">
+        <p class="text-xl md:text-2xl font-bold">Best Deals for you</p>
+        <button id="sort-price" class="bg-[#0E7A81] px-6 py-2 text-md md:text-xl text-white rounded-xl">Sort By
+            Price</button>
+    </section>
+
+    <section class="grid grid-cols-12 max-w-[1920px] px-5 md:px-10 mx-auto my-4 gap-2 md:gap-4">
+        <div class="col-span-12 lg:col-span-9  border rounded-xl p-4 order-2 lg:order-1">
+            <div id="pets" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 ">
+            </div>
+        </div>
+        <div class="col-span-12 lg:col-span-3 border rounded-xl p-4 order-1 lg:order-2">
+            <div id="liked_image" class="grid grid-cols-2 gap-4"></div>
+
+        </div>
+    </section>
+
+    <!-- Modal for pet details -->
+    <dialog id="my_modal_4" class="modal">
+        <div class="modal-box max-w-xl">
+            <img id="modalImage" class="w-full rounded-lg mb-4" src="" alt="Pet Image">
+            <h3 id="modalPetName" class="text-2xl my-2 font-bold">Hello!</h3>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                <p class="text-md flex items-center gap-2"><i class="fa-solid fa-boxes-stacked w-4"></i>
+                    Breed: <span id="modalBreed"></span></p>
+                <p class="text-md flex items-center gap-2"><i class="fa-solid fa-calendar-days w-4"></i> Birth:
+                    <span id="modalBirthDate"></span>
+                </p>
+                <p class="text-md flex items-center gap-2"><i class="fa-solid fa-transgender w-4"></i>
+                    Gender: <span id="modalGender"></span></p>
+                <p class="text-md flex items-center gap-2"><i class="fa-solid fa-money-check-dollar w-4"></i>Price:
+                    <span id="modalPrice"></span>$
+                </p>
+                <p class="text-md flex items-center gap-2"><i class="fa-solid fa-money-check-dollar w-4"></i>
+                    Vaccinated
+                    status: <span id="modalVaccineStatus"></span></p>
+            </div>
+            <hr class="my-2">
+            <div>
+                <h3 class="text-lg font-bold">Description</h3>
+                <p id="modalDescription" class="text-md">${pet.description || 'Not Available'}</p>
+            </div>
+            <div class="modal-action flex items-center justify-center">
+                <form method="dialog">
+                    <!-- if there is a button, it will close the modal -->
+                    <button class="btn">Close</button>
+                </form>
+            </div>
+        </div>
+    </dialog>
+
+    <!-- Modal for adoption -->
+
+    <dialog id="adoptModal" class="modal">
+        <div class="modal-box max-w-md text-center">
+            <div class="flex justify-center">
+                <img class="w-20" src="./images/party-popper.png" alt="">
+            </div>
+            <h3 class="text-3xl font-bold my-4">Congrates !!</h3>
+            <p id="adoptMessage" class="text-md mt-4"></p> <!-- Adoption status message -->
+            <p id="adoptCountdown" class="text-4xl font-bold"></p> <!-- Countdown display -->
+        </div>
+    </dialog>
+
+
+
+    <div id="footer" class=" bg-[#131313] pt-20 mt-10">
+        <footer class="max-w-[1920px] px-5 md:px-10 mx-auto ">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5 md:gap-10 text-white">
+                <div class="flex flex-col gap-4">
+                    <a href="index.html">
+                        <div class="flex items-center gap-5">
+                            <img src="./images/logo.webp" alt="Peddy Logo" class="w-8">
+                            <p class="text-4xl font-bold">Peddy</p>
+                        </div>
+                    </a>
+                    <p class="text-gray-300">Explore a wide range of pets waiting for a loving home and take the first step towards
+                        adoption. Together, let's help animals find the care and affection they deserve.</p>
+
+                    <div class="flex items-center gap-4">
+                        <i class="fa-brands fa-square-facebook text-2xl"></i>
+                        <i class="fa-brands fa-x-twitter text-2xl"></i>
+                        <i class="fa-brands fa-instagram text-2xl"></i>
+                        <i class="fa-brands fa-youtube text-2xl"></i>
+                    </div>
+                </div>
+
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Address</h3>
+                    <div>
+                        <ul class="list-style-none text-gray-300 space-y-2">
+                            <p>Location: Washington 165, NY CA 54003</p>
+                            <p>Phone: +1 23456789</p>
+                            <p>Email: akashsaha1313@gmail.com</p>
+                            <p>Opening Hours: 9:00 AM to 5:00 PM</p>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-xl font-bold text-white mb-4">Usefull Links</h3>
+                    <div>
+                        <ul class="list-style-none text-gray-300 space-y-2">
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#adopt-heading">About Us</a></li>
+                            <li><a href="#">Animals</a></li>
+                            <li><a href="#">Foundations</a></li>
+                            <li><a href="#footer">Contact</a></li>
+
+                        </ul>
+                    </div>
+
+                </div>
+
+                <form>
+                    <h6 class="text-xl font-bold text-white mb-2">Newsletter</h6>
+                    <p class="text-gray-300">Subscribe to our newsletter! 😛</p>
+                    <fieldset class="form-control mt-2">
+                        <div class="flex flex-col gap-4 w-3/4 md:w-full ">
+                            <input type="text" placeholder="Enter your email address"
+                                class="input input-bordered join-item" />
+                            <button
+                                class="btn bg-[#0E7A81] border-2 border-[#0E7A81] text-white hover:text-black">Subscribe</button>
+                        </div>
+                    </fieldset>
+                </form>
+
+            </div>
+            <hr class="my-4 bg-gray-200 mt-20">
+        </footer>
+        <div class="text-sm text-white text-center pb-10">2024 - All rights reserved - Akash Saha</div>
+    </div>
+
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>
